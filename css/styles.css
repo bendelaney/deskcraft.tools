@@ -36,19 +36,15 @@ body {
     font-family: var(--font-primary);
     color: var(--color-text);
     background-color: var(--color-background);
+}
+
+.container {
+    max-width: none;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 4rem 6rem;
-}
-
-.container {
-    max-width: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
 }
 
 .site-header {
@@ -123,6 +119,126 @@ body {
     }
 
     .tagline {
+        font-size: 1.25rem;
+    }
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 4rem;
+    right: 6rem;
+    z-index: 100;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-accent);
+}
+
+/* Pricing Section */
+.pricing-section {
+    min-height: 100vh;
+    padding: 4rem 6rem;
+    background-color: var(--color-background);
+}
+
+.pricing-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 50rem;
+}
+
+.pricing-card {
+    padding: 2rem;
+    border: 1px solid rgba(89, 89, 89, 0.2);
+}
+
+.product-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-options {
+    display: flex;
+    gap: 2rem;
+}
+
+.price-option {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(89, 89, 89, 0.7);
+}
+
+.price-tbd {
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba(89, 89, 89, 0.5);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pricing responsive */
+@media (max-width: 768px) {
+    .nav {
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .pricing-section {
+        padding: 3rem 2rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .pricing-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .pricing-title {
+        font-size: 2rem;
+    }
+
+    .product-name {
         font-size: 1.25rem;
     }
 }
