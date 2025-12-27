@@ -36,6 +36,9 @@ body {
     font-family: var(--font-primary);
     color: var(--color-text);
     background-color: var(--color-background);
+    background-image: url('../img/papertile.jpg');
+    background-size: 400px 400px;
+    background-repeat: repeat;
 }
 
 .container {
@@ -75,7 +78,7 @@ body {
     font-size: 3.3rem;
     font-weight: 200;
     line-height: 1.4;
-    max-width: 70vw;
+    max-width: 65vw;
 }
 
 .tagline strong {
@@ -147,7 +150,7 @@ body {
 .pricing-section {
     min-height: 100vh;
     padding: 4rem 6rem;
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
 }
 
 .pricing-title {
